@@ -1,0 +1,41 @@
+.service-detail { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.detail-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .42fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+.detail-copy h2 { margin: 0 0 18px; font-size: clamp(2.4rem, 5vw, 5rem); line-height: 1; letter-spacing: -.06em; }
+.detail-copy p { color: var(--muted); line-height: 1.82; font-weight: 750; }
+.detail-media {
+  position: sticky;
+  top: 130px;
+  min-height: 420px;
+  border-radius: 32px;
+  background: radial-gradient(circle at 36% 26%, rgba(255,255,255,.72), transparent 8rem), linear-gradient(145deg, #3152ff, #061a3d);
+  box-shadow: var(--shadow);
+}
+.detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 36px 0;
+}
+.detail-box {
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--lav-2);
+  border: 1px solid rgba(49,82,255,.08);
+}
+.detail-box h3 { margin: 0 0 10px; font-size: 1.22rem; }
+.detail-box p { margin: 0; color: var(--muted); line-height: 1.65; font-weight: 730; }
+.faq-section { padding: clamp(60px, 8vw, 110px) 0; background: linear-gradient(180deg, #f8faff, #fff); }
+.faq-wrap { width: min(900px, 100%); margin: 0 auto; }
+.faq-wrap h2 { margin: 0 0 24px; text-align: center; font-size: clamp(2.3rem, 5vw, 4.8rem); letter-spacing: -.06em; line-height: 1; }
+.faq-item { border-bottom: 1px solid rgba(6,26,61,.12); }
+.faq-item summary { display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; cursor: pointer; font-size: 1.18rem; font-weight: 950; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--blue); font-size: 1.5rem; line-height: 1; }
+.faq-item[open] summary::after { content: "-"; }
+.faq-item p { margin: 0; padding: 0 0 22px; color: var(--muted); line-height: 1.75; font-weight: 750; }
+@media (max-width: 860px) { .detail-intro, .detail-list { grid-template-columns: 1fr; } .detail-media { position: relative; top: auto; min-height: 300px; } }

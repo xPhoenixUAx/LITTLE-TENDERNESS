@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Little Tenderness mark">
+  <defs>
+    <linearGradient id="g" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5FF"/>
+      <stop offset=".55" stop-color="#3152FF"/>
+      <stop offset="1" stop-color="#7C5CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#F2F5FF"/>
+  <path d="M16 17h18c7 0 12 5 12 12s-5 12-12 12H24v6h-8V17Zm8 8v8h10c2.4 0 4-1.6 4-4s-1.6-4-4-4H24Z" fill="url(#g)"/>
+  <circle cx="48" cy="18" r="5" fill="#16D39A"/>
+</svg>

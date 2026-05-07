@@ -1,0 +1,47 @@
+.about-story { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.about-grid {
+  display: grid;
+  grid-template-columns: .95fr 1fr;
+  gap: clamp(34px, 7vw, 88px);
+  align-items: center;
+}
+.about-collage {
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.about-shot {
+  border-radius: 28px;
+  background: linear-gradient(135deg, #dfe5ff, #3152ff);
+  border: 8px solid rgba(49,82,255,.12);
+}
+.about-shot.tall { grid-row: span 2; background: linear-gradient(145deg, #fff, #9fb0ff); }
+.about-shot.dark { background: linear-gradient(145deg, #061a3d, #3152ff); }
+.about-copy h2 { margin: 10px 0 18px; font-size: clamp(2.4rem, 5vw, 5.3rem); line-height: 1; letter-spacing: -.065em; }
+.about-copy p { color: var(--muted); line-height: 1.8; font-weight: 750; }
+.approach { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.approach-panel {
+  padding: clamp(32px, 6vw, 70px);
+  border-radius: 38px;
+  background:
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px),
+    radial-gradient(circle at 88% 20%, rgba(49,82,255,.35), transparent 24rem),
+    #0f1531;
+  background-size: 76px 76px, 76px 76px, auto, auto;
+  color: #fff;
+}
+.approach-panel h2 { text-align: center; width: min(850px,100%); margin: 10px auto 42px; font-size: clamp(2.4rem, 5vw, 5rem); line-height: 1; letter-spacing: -.06em; }
+.approach-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.approach-card {
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+}
+.approach-card span { color: var(--blue-2); font-size: 2.2rem; font-weight: 950; }
+.approach-card h3 { margin: 22px 0 14px; font-size: 1.5rem; }
+.approach-card p { margin: 0; color: rgba(255,255,255,.72); line-height: 1.65; font-weight: 730; }
+@media (max-width: 860px) { .about-grid, .approach-cards { grid-template-columns: 1fr; } .about-collage { min-height: 380px; } }

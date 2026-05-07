@@ -1,0 +1,20 @@
+.legal { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.legal-wrap {
+  width: min(920px, 100%);
+  margin-inline: auto;
+  padding: clamp(26px, 5vw, 58px);
+  border-radius: 30px;
+  background: var(--lav-2);
+  border: 1px solid rgba(49,82,255,.08);
+}
+.legal-wrap h2 { margin: 38px 0 12px; font-size: clamp(1.45rem, 2.5vw, 2.3rem); letter-spacing: -.035em; }
+.legal-wrap h2:first-child { margin-top: 0; }
+.legal-wrap p,
+.legal-wrap li { color: var(--muted); line-height: 1.8; font-weight: 740; }
+.legal-wrap ul { padding-left: 20px; }
+.legal-meta { display: grid; gap: 4px; margin-bottom: 28px; color: var(--text); font-weight: 850; }
+.cookie-table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 16px; background: #fff; }
+.cookie-table th,
+.cookie-table td { padding: 12px; border-bottom: 1px solid rgba(6,26,61,.09); text-align: left; color: var(--muted); }
+.cookie-table th { color: var(--ink); }
+@media (max-width: 620px) { .cookie-table { display: block; overflow-x: auto; } }
