@@ -139,6 +139,15 @@ document.querySelectorAll("[data-proof-slider]").forEach((slider) => {
   next?.addEventListener("click", () => showSlide(active + 1));
 });
 
+document.querySelectorAll(".price-card").forEach((card) => {
+  const trigger = card.querySelector(".price-more");
+  if (!trigger) return;
+  trigger.addEventListener("click", () => {
+    const isOpen = card.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
 document.querySelectorAll(".contact-form").forEach((form) => {
   const note = form.querySelector(".form-note");
   const status = new URLSearchParams(window.location.search).get("form");

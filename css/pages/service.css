@@ -323,6 +323,14 @@
 .faq-item p { margin: 0; padding: 0 0 22px; color: var(--muted); line-height: 1.75; font-weight: 750; }
 @media (max-width: 860px) {
   .detail-intro, .detail-list { grid-template-columns: 1fr; }
+  .detail-intro .detail-media { order: 2; grid-row: auto; }
+  .detail-intro .detail-copy { display: contents; }
+  .detail-copy h2 { order: 1; }
+  .detail-lead { order: 3; }
+  .detail-copy p:not(.detail-lead) { order: 4; }
+  .detail-list { order: 5; }
+  .service-section { order: 6; }
+  .service-cta { order: 7; }
   .service-tools { grid-template-columns: 1fr; }
   .phase-card { grid-template-columns: 44px minmax(0, 1fr); }
   .detail-media { position: relative; top: auto; min-height: 300px; }

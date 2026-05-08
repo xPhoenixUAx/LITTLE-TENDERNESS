@@ -139,13 +139,13 @@
 .menu-close span:first-child { transform: translate(-50%, -50%) rotate(45deg); }
 .menu-close span:last-child { transform: translate(-50%, -50%) rotate(-45deg); }
 .overlay-nav { align-self: center; display: grid; gap: 4px; }
-.overlay-nav a, .service-menu-toggle {
+.overlay-nav > a, .service-menu-toggle {
   width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 18px;
   border: 0;
-  padding: 16px 0;
+  padding: 16px 38px 16px 0;
   background: transparent;
   color: var(--ink);
   font-size: clamp(2.2rem, 9vw, 5.5rem);
@@ -153,10 +153,20 @@
   letter-spacing: -.06em;
   font-weight: 950;
 }
-.nav-index { min-width: 44px; color: var(--blue); font-size: .86rem; letter-spacing: 0; }
-.service-menu-toggle > span { display: inline-flex; align-items: center; gap: 18px; }
-.service-menu-toggle svg { margin-left: auto; width: 24px; transition: transform 220ms var(--ease); }
-.service-menu-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.nav-label {
+  min-width: 0;
+  display: block;
+}
+.service-menu-toggle svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+  transition: transform 220ms var(--ease);
+}
+.service-menu-toggle[aria-expanded="true"] svg { transform: translateY(-50%) rotate(180deg); }
 .service-submenu { max-height: 0; overflow: hidden; display: grid; padding-left: 64px; opacity: 0; transition: max-height 260ms var(--ease), opacity 220ms var(--ease); }
 .menu-service-group.is-open .service-submenu { max-height: 230px; opacity: 1; }
 .overlay-nav .service-submenu a { padding: 7px 0; font-size: 1.08rem; letter-spacing: 0; color: var(--muted); }
@@ -259,10 +269,40 @@
 }
 
 @media (max-width: 620px) {
-  .site-header { inset: 12px 0 auto; }
-  .brand { min-width: 0; }
-  .brand-mark { width: 44px; height: 44px; }
-  .brand-text { font-size: 1.08rem; }
+  .site-header { inset: 10px 0 auto; }
+  .nav-shell {
+    width: min(100% - 28px, 420px);
+    min-height: 58px;
+    justify-content: space-between;
+    padding: 7px 8px 7px 12px;
+    border-radius: 17px;
+    box-shadow: 0 14px 42px rgba(6,26,61,.08);
+  }
+  .brand { min-width: 0; gap: 8px; }
+  .brand-mark { width: 40px; height: 40px; }
+  .brand-text { font-size: .92rem; letter-spacing: -.055em; line-height: .92; }
   .brand-text small { display: none; }
-  .nav-shell { min-height: 62px; padding: 7px 7px 7px 12px; border-radius: 18px; }
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+  }
+  .menu-toggle svg { width: 21px; height: 21px; }
+  .overlay-nav {
+    width: min(100%, 330px);
+    justify-self: start;
+  }
+  .overlay-nav > a,
+  .service-menu-toggle {
+    padding: 13px 34px 13px 0;
+    font-size: clamp(2.05rem, 9.4vw, 2.55rem);
+  }
+  .service-menu-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+  .overlay-nav .service-submenu a {
+    padding: 7px 0;
+    font-size: 0.96rem;
+  }
 }

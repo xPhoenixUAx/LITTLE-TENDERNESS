@@ -578,17 +578,40 @@
   }
 
   .proof-card {
-    min-height: 430px;
+    min-height: 500px;
     padding: 30px 24px;
     border-radius: 24px;
   }
 
   .proof-slide {
     inset: 30px 24px;
+    align-content: start;
   }
 
   .proof-slide p {
     font-size: 1.05rem;
+    margin-bottom: 26px;
+    line-height: 1.5;
+  }
+
+  .proof-person span {
+    padding-right: 0;
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .proof-arrow {
+    bottom: 26px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .proof-prev {
+    left: calc(50% - 48px);
+  }
+
+  .proof-next {
+    right: calc(50% - 48px);
   }
 
   .faq-intro h2 {
