@@ -123,6 +123,22 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
+document.querySelectorAll("[data-proof-slider]").forEach((slider) => {
+  const slides = [...slider.querySelectorAll(".proof-slide")];
+  const shell = slider.closest(".proof-shell");
+  const prev = shell?.querySelector(".proof-prev");
+  const next = shell?.querySelector(".proof-next");
+  if (slides.length < 2) return;
+  let active = slides.findIndex((slide) => slide.classList.contains("is-active"));
+  if (active < 0) active = 0;
+  const showSlide = (index) => {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => slide.classList.toggle("is-active", slideIndex === active));
+  };
+  prev?.addEventListener("click", () => showSlide(active - 1));
+  next?.addEventListener("click", () => showSlide(active + 1));
+});
+
 document.querySelectorAll(".contact-form").forEach((form) => {
   const note = form.querySelector(".form-note");
   const status = new URLSearchParams(window.location.search).get("form");

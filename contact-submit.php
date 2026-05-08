@@ -24,6 +24,8 @@ $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $subject = trim($_POST['subject'] ?? '');
 $companyField = trim($_POST['company'] ?? '');
+$websiteField = trim($_POST['website'] ?? '');
+$service = trim($_POST['service'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $honeypot = trim($_POST['website_url'] ?? '');
 
@@ -37,13 +39,15 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $message === '
   exit;
 }
 
-$safeSubject = $subject !== '' ? $subject : 'New website inquiry';
+$safeSubject = $subject !== '' ? $subject : ($service !== '' ? $service . ' audit request' : 'New website inquiry');
 $mailSubject = 'Website inquiry from ' . $website . ': ' . $safeSubject;
 $body = "New inquiry for {$company}\n\n";
 $body .= "Name: {$name}\n";
 $body .= "Email: {$email}\n";
 $body .= "Subject: {$safeSubject}\n";
-$body .= "Company: {$companyField}\n\n";
+$body .= "Company: {$companyField}\n";
+$body .= "Website: {$websiteField}\n";
+$body .= "Service: {$service}\n\n";
 $body .= "Message:\n{$message}\n";
 
 $headers = [];

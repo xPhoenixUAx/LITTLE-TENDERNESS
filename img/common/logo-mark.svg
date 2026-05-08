@@ -1,12 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Little Tenderness mark">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Little Tenderness brand mark">
   <defs>
-    <linearGradient id="g" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0EA5FF"/>
-      <stop offset=".55" stop-color="#3152FF"/>
-      <stop offset="1" stop-color="#7C5CFF"/>
+    <linearGradient id="lt-bg" x1="8" y1="8" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#E4EAFF"/>
     </linearGradient>
+    <linearGradient id="lt-blue" x1="13" y1="19" x2="67" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1DB7FF"/>
+      <stop offset=".48" stop-color="#3152FF"/>
+      <stop offset="1" stop-color="#7B5CFF"/>
+    </linearGradient>
+    <linearGradient id="lt-deep" x1="22" y1="18" x2="61" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#062C66"/>
+      <stop offset="1" stop-color="#031A3D"/>
+    </linearGradient>
+    <filter id="lt-shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#3152FF" flood-opacity=".24"/>
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="18" fill="#F2F5FF"/>
-  <path d="M16 17h18c7 0 12 5 12 12s-5 12-12 12H24v6h-8V17Zm8 8v8h10c2.4 0 4-1.6 4-4s-1.6-4-4-4H24Z" fill="url(#g)"/>
-  <circle cx="48" cy="18" r="5" fill="#16D39A"/>
+  <rect x="4" y="4" width="72" height="72" rx="22" fill="url(#lt-bg)"/>
+  <rect x="4.5" y="4.5" width="71" height="71" rx="21.5" fill="none" stroke="#FFFFFF" stroke-opacity=".82"/>
+  <g filter="url(#lt-shadow)">
+    <path d="M20 22h19.5c9.9 0 17.2 6.7 17.2 15.8 0 8.7-6.7 15.1-16.1 15.7l-5.7.3v-12h4.7c3.3 0 5.5-1.7 5.5-4.4 0-2.8-2.2-4.5-5.5-4.5H32.1V60H20V22Z" fill="url(#lt-deep)"/>
+    <path d="M32 20h28v12H44.4v27.7H32V20Z" fill="url(#lt-blue)"/>
+    <path d="M44.4 32H60L44.4 47.9V32Z" fill="#17C9FF" opacity=".72"/>
+    <path d="M20 22h12.1v10.9H20V22Z" fill="#7B5CFF"/>
+  </g>
+  <circle cx="61.5" cy="20.5" r="5.5" fill="#22D3A6"/>
+  <circle cx="61.5" cy="20.5" r="2" fill="#F8FAFF"/>
 </svg>
